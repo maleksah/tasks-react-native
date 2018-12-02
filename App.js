@@ -12,6 +12,14 @@ export default class App extends React.Component {
       </View>
     );
   }
+
+  componentDidMount() {
+    StatusBar.setHidden(true);
+  }
+
+  componentWillUnmount() {
+    StatusBar.setHidden(false);
+  }
 }
 
 const styles = StyleSheet.create({
